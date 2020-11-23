@@ -1,15 +1,22 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2020: true,
+    jest: true,
   },
   extends: [
-    'airbnb-base',
+    "airbnb-base",
   ],
   parserOptions: {
-    ecmaVersion: 12,
-    sourceType: 'module',
+    ecmaVersion: 11,
+    sourceType: "module",
   },
   rules: {
+    "no-use-before-define": ["error", { functions: false }],
+    quotes: ["error", "double"],
+    "import/prefer-default-export": "off",
+    "no-param-reassign": ["error", { props: false }],
+    radix: ["error", "as-needed"],
+    "no-console": "error",
   },
 };
